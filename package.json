@@ -22,6 +22,7 @@
     "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
     "cypress": "^12.14.0",
+    "framer-motion": "^10.12.16",
     "jsonwebtoken": "^9.0.0",
     "next": "13.4.5",
     "next-auth": "^4.22.1",
