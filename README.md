@@ -18,7 +18,7 @@ The main features of the app include:
 - Deleting a contact
 
 ## Tech Stack
-- NextJS.js
+- Next.js
 - Material UI
 - Storybook
 - Cypress
