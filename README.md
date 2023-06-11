@@ -1,8 +1,12 @@
 # Contact Rolodex
 
- Contact Rolodex is a web application that helps you manage your contacts. It allows you to create, read, update and delete contact information using an intuitive interface.
+Contact Rolodex is a web application designed to assist you in managing your contacts. It provides an intuitive interface for creating, reading, updating, and deleting contact information.
 
-The app is built with Next.js on the frontend with Material UI, Node.js and Express on the backend, and PostgreSQL as the database. The UI design was done using Figma.
+The application's frontend is built using Next.js with Material UI for styling. Storybook has also been used for UI component development and documentation. Cypress is used as the testing framework to ensure the application functions as expected.
+
+On the backend, Contact Rolodex utilizes PostgreSQL as the database to store contact information securely.
+
+The UI design for the application was created using Figma, ensuring a visually appealing and user-friendly experience.
 
 ## Features
 The main features of the app include:
@@ -15,9 +19,9 @@ The main features of the app include:
 
 ## Tech Stack
 - NextJS.js
-- Tailwind CSS
-- Node.js
-- Express
+- Material UI
+- Storybook
+- Cypress
 - PostgreSQL
 - Figma
 
