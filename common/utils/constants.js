@@ -24,3 +24,19 @@ export const ValidationMessages = {
     passwordTooShort: "Password is too short (minimum 6 characters)",
     passwordNotMatch: "Passwords not match",
 };
+
+export const NotificationMessages = {
+    auth: {
+        authFailed: "Invalid email or password provided.",
+        invalidKey: "Invalid key provided!",
+        usedKey: "This key has already been used!",
+        activationSuccess: "Your account has been successfully activated.",
+        userExists: "A user with this email already exists!",
+        userDoesNotExists: "A user with this email does not exist!",
+        activationEmailSent: "An activation link has been sent to your email.",
+        resetPasswordEmailSent:
+            "A reset password link has been sent to your email.",
+        passwordResetSuccess:
+            "Your password has been reset. You will be redirected to the sign in page shortly...",
+    },
+};

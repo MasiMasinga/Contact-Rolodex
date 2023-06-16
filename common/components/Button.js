@@ -1,9 +1,39 @@
-import React from 'react'
+import React from "react";
 
-const Button = () => {
-  return (
-    <div>Button</div>
-  )
-}
+// Mui
+import MuiButton from "@mui/material/Button";
+import CircularProgress from "@mui/material/CircularProgress";
 
-export default Button
+const Button = ({
+    type = "button",
+    variant = "contained",
+    isLoading = false,
+    disabled = false,
+    fullWidth = false,
+    compact = false,
+    onClick,
+    children,
+    sx,
+    ...rest
+}) => {
+    return (
+        <MuiButton
+            type={type}
+            disabled={disabled || isLoading}
+            onClick={onClick}
+            fullWidth={fullWidth}
+            endIcon={isLoading && <CircularProgress size={20} />}
+            variant={variant}
+            sx={{
+                py: compact ? 0.5 : 1.5,
+                px: compact ? 2 : 4,
+                ...sx,
+            }}
+            {...rest}
+        >
+            {children}
+        </MuiButton>
+    );
+};
+
+export default Button;

@@ -1,9 +1,49 @@
-import React from 'react'
+import React from "react";
 
-const Typography = () => {
+// Mui
+import MuiTypography from "@mui/material/Typography";
+
+const Typography = ({
+  variant,
+  children,
+  bold,
+  mt,
+  mb,
+  ml,
+  mr,
+  sx,
+  ...rest
+}) => {
   return (
-    <div>Typography</div>
-  )
-}
+    <MuiTypography
+      variant={variant}
+      sx={{
+        ...(mt && {
+          my: 0,
+          mt: 2,
+        }),
+        ...(mb && {
+          my: 0,
+          mb: 2,
+        }),
+        ...(ml && {
+          my: 0,
+          ml: 2,
+        }),
+        ...(mr && {
+          my: 0,
+          mr: 2,
+        }),
+        ...(bold && {
+          fontWeight: 700,
+        }),
+        ...sx,
+      }}
+      {...rest}
+    >
+      {children}
+    </MuiTypography>
+  );
+};
 
-export default Typography
+export default Typography;
