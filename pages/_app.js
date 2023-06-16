@@ -5,15 +5,14 @@ import { ThemeProvider } from "@mui/material/styles";
 import { SnackbarProvider } from "notistack";
 
 // Provider
-import { SessionProvider } from "next-auth/react"
-import { StateProvider } from "@/common/contexts/StateContext";
+import { StateProvider } from "@/common/context/StateContext";
 
 // Global Styles
 import { Global, css } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";
 
 // Theme
-import { theme } from "@/common/utils/theme";
+import theme from "@/common/theme/theme";
 
 const GlobalStyle = css`
   html {
@@ -37,17 +36,15 @@ const GlobalStyle = css`
   }
 `;
 
-export default function App({ session, Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <SnackbarProvider>
-        <SessionProvider session={session}>
           <StateProvider>
             <Global styles={GlobalStyle} />
             <CssBaseline />
             <Component {...pageProps} />
           </StateProvider>
-        </SessionProvider>
       </SnackbarProvider>
     </ThemeProvider>
   );

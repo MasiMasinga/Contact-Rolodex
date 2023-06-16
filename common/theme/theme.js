@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import { Colors } from "./constants";
+import { Colors } from "../utils/constants";
 
 const ThemeFontFamily = "'Poppins', sans-serif";
 
@@ -81,7 +81,6 @@ theme.typography = {
         fontFamily: ThemeFontFamily,
     },
     h6: {
-        fontWeight: 700,
         fontSize: "16px",
         fontFamily: ThemeFontFamily,
     },
@@ -94,7 +93,6 @@ theme.typography = {
         fontWeight: 400,
         fontSize: "14px",
         lineHeight: "22px",
-        color: Colors.greyDark,
         fontFamily: ThemeFontFamily,
     },
     subtitle: {
@@ -120,7 +118,7 @@ theme.components = {
                 height: "fit-contents",
                 ...(ownerState.variant === "contained" && {
                     backgroundColor: Colors.secondary,
-                    color: Colors.primary,
+                    color: Colors.white,
                     border: `2px solid ${Colors.secondary}`,
                     "&:hover": {
                         backgroundColor: Colors.secondary,
@@ -131,13 +129,13 @@ theme.components = {
                     border: `2px solid ${Colors.secondary}`,
                     "&:hover": {
                         backgroundColor: Colors.secondary,
-                        color: Colors.primary,
+                        color: Colors.white,
                         border: `2px solid ${Colors.secondary}`,
                     },
                 }),
                 ...(ownerState.disabled && {
                     backgroundColor: `${Colors.greyMed} !important`,
-                    color: Colors.primary,
+                    color: Colors.white,
                     border: `2px solid ${Colors.greyMed} !important`,
                     ...(ownerState.variant === "plain" && {
                         backgroundColor: `transparent !important`,
