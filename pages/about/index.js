@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
 // Components
-import AboutHeroSection from '@/common/components/AboutHeroSection'
+import AboutHeroSection from "@/common/components/AboutHeroSection";
 
 const About = () => {
   return (
     <>
       <AboutHeroSection />
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

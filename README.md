@@ -9,6 +9,7 @@ On the backend, Contact Rolodex utilizes PostgreSQL as the database to store con
 The UI design for the application was created using Figma, ensuring a visually appealing and user-friendly experience.
 
 ## Features
+
 The main features of the app include:
 
 - Adding a new contact with name, email, phone number, and a profile picture
@@ -18,6 +19,7 @@ The main features of the app include:
 - Deleting a contact
 
 ## Tech Stack
+
 - Next.js
 - Material UI
 - Storybook
@@ -26,4 +28,5 @@ The main features of the app include:
 - Figma
 
 ## Figma Wireframe URL:
+
 - https://www.figma.com/file/oH4twVmFOMoQTHAgFDU5CP/Contact-Rolodex?type=design&node-id=0-1&t=jZpiS5Pr47qD21Qe-0

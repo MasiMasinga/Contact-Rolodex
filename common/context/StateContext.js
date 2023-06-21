@@ -7,35 +7,35 @@ import Slide from "@mui/material/Slide";
 export const StateContext = createContext();
 
 const TransitionDown = (props) => {
-    return <Slide {...props} direction="down" />;
+  return <Slide {...props} direction="down" />;
 };
 
 export const StateProvider = ({ children }) => {
-    const { enqueueSnackbar } = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
 
-    const [notificationMessage, setNotificationMessage] = useState();
-    const [breadcrumbs, setBreadcrumbs] = useState();
+  const [notificationMessage, setNotificationMessage] = useState();
+  const [breadcrumbs, setBreadcrumbs] = useState();
 
-    useEffect(() => {
-        if (notificationMessage) {
-            enqueueSnackbar(notificationMessage.message, {
-                variant: notificationMessage.type,
-                anchorOrigin: {
-                    vertical: "top",
-                    horizontal: "center",
-                },
-                TransitionComponent: TransitionDown,
-            });
-        }
-    }, [notificationMessage, enqueueSnackbar]);
+  useEffect(() => {
+    if (notificationMessage) {
+      enqueueSnackbar(notificationMessage.message, {
+        variant: notificationMessage.type,
+        anchorOrigin: {
+          vertical: "top",
+          horizontal: "center",
+        },
+        TransitionComponent: TransitionDown,
+      });
+    }
+  }, [notificationMessage, enqueueSnackbar]);
 
-    let value = {
-        breadcrumbs,
-        setBreadcrumbs,
-        setNotificationMessage,
-    };
+  let value = {
+    breadcrumbs,
+    setBreadcrumbs,
+    setNotificationMessage,
+  };
 
-    return (
-        <StateContext.Provider value={value}>{children}</StateContext.Provider>
-    );
+  return (
+    <StateContext.Provider value={value}>{children}</StateContext.Provider>
+  );
 };
