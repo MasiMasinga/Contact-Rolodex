@@ -40,11 +40,11 @@ export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <SnackbarProvider>
-          <StateProvider>
-            <Global styles={GlobalStyle} />
-            <CssBaseline />
-            <Component {...pageProps} />
-          </StateProvider>
+        <StateProvider>
+          <Global styles={GlobalStyle} />
+          <CssBaseline />
+          <Component {...pageProps} />
+        </StateProvider>
       </SnackbarProvider>
     </ThemeProvider>
   );

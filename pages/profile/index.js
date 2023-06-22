@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+
+// Components
+import DashboardLayout from "@/common/layout/DashboardLayout";
 
 const Profile = () => {
-  return (
-    <div>Profile</div>
-  )
-}
+  return <DashboardLayout>Profile</DashboardLayout>;
+};
 
-export default Profile
+export default Profile;

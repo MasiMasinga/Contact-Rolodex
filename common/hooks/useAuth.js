@@ -1,10 +1,7 @@
-import { useState, useEffect, useContext } from 'react';
-
+import { useState, useEffect, useContext } from "react";
 
 const useAuth = () => {
-    
-    return {
-    };
+  return {};
 };
 
 export default useAuth;

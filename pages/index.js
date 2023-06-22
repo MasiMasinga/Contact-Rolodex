@@ -1,7 +1,7 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 // Components
-import HomeHeroSection from '@/common/components/HomeHeroSection'
+import HomeHeroSection from "@/common/components/HomeHeroSection";
 
 export default function Home() {
   return (
@@ -18,5 +18,5 @@ export default function Home() {
       </Head>
       <HomeHeroSection />
     </>
-  )
+  );
 }

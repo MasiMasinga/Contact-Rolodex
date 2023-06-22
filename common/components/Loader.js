@@ -31,11 +31,11 @@ const LoaderContainer = styled.div`
 
   .loader {
     ${(props) =>
-    props.light
-      ? `
+      props.light
+        ? `
             color: ${Colors.white};
         `
-      : `
+        : `
             color: ${Colors.primary};
         `}
   }
