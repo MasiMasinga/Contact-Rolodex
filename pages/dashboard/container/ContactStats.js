@@ -22,23 +22,23 @@ const ContactStats = () => {
         p: 2,
       }}
     >
-      <Stack spacing={1}>
-        <Typography variant="h4" sx={{ fontWeight: 400 }}>
+      <Stack justifyContent="center" spacing={1}>
+        <Typography variant="h6" sx={{ fontWeight: 400 }}>
           Contacts Added
         </Typography>
-        <Typography variant="h4">23</Typography>
+        <Typography variant="h5" align="center">23</Typography>
       </Stack>
-      <Stack spacing={1}>
-        <Typography variant="h4" sx={{ fontWeight: 400 }}>
+      <Stack justifyContent="center"  spacing={1}>
+        <Typography variant="h6" sx={{ fontWeight: 400 }}>
           Total number of contacts
         </Typography>
-        <Typography variant="h4">46</Typography>
+        <Typography variant="h5" align="center">46</Typography>
       </Stack>
-      <Stack spacing={1}>
-        <Typography variant="h4" sx={{ fontWeight: 400 }}>
+      <Stack justifyContent="center"  spacing={1}>
+        <Typography variant="h6" sx={{ fontWeight: 400 }}>
           Total number of contacts deleted
         </Typography>
-        <Typography variant="h4">4</Typography>
+        <Typography variant="h5" align="center">4</Typography>
       </Stack>
     </Stack>
   );

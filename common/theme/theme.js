@@ -143,6 +143,36 @@ theme.components = {
             border: `0px solid transparent !important`,
           }),
         }),
+        ...(ownerState.variant === "view" && {
+          border: `2px solid ${Colors.fadedBlue}`,
+          backgroundColor: Colors.fadedBlue,
+          color: Colors.white,
+          "&:hover": {
+            backgroundColor: Colors.fadedBlue,
+            color: Colors.white,
+            border: `2px solid ${Colors.fadedBlue}`,
+          },
+        }),
+        ...(ownerState.variant === "edit" && {
+          border: `2px solid ${Colors.yellow}`,
+          backgroundColor: Colors.yellow,
+          color: Colors.white,
+          "&:hover": {
+            backgroundColor: Colors.yellow,
+            color: Colors.white,
+            border: `2px solid ${Colors.yellow}`,
+          },
+        }),
+        ...(ownerState.variant === "delete" && {
+          border: `2px solid ${Colors.red}`,
+          backgroundColor: Colors.red,
+          color: Colors.white,
+          "&:hover": {
+            backgroundColor: Colors.red,
+            color: Colors.white,
+            border: `2px solid ${Colors.red}`,
+          },
+        }),
       }),
     },
     variants: [

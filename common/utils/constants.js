@@ -7,9 +7,13 @@ export const Colors = {
   white: "#FFFFFF",
   green: "#27AE60",
   red: "#EB5757",
+  fadedBlue: "#619FCD",
   greyLight: "#F0F1F5",
   greyMed: "#D8DAE3",
   greyDark: "#9396A5",
+  maroon: "#961A1A",
+  darkGreen: "#1A7D24",
+  darkBlue: "#203A95",
   shadow: "0 6px 15px rgba(0 0 0 / 0.1)",
   shadowBig: "0 6px 30px rgba(0 0 0 / 0.2)",
 };
