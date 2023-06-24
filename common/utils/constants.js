@@ -24,9 +24,10 @@ export const BlockSpacing = 3;
 
 export const ValidationMessages = {
   required: "Required",
-  isValidEmail: "Invalid Email",
+  inValidEmail: "Invalid Email",
   passwordTooShort: "Password is too short (minimum 6 characters)",
   passwordNotMatch: "Passwords not match",
+  emailDoNotMatch: "Emails not match",
 };
 
 export const NotificationMessages = {
