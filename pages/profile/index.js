@@ -11,22 +11,20 @@ import UpdateEmailForm from "./container/UpdateEmailForm";
 import UpdatePasswordForm from "./container/UpdatePasswordForm";
 
 const Profile = () => {
-    return (
-        <DashboardLayout>
-            <Stack>
-                <ProfileIcon />
-            </Stack>
-            <Stack spacing={2}>
-                <UpdateEmailForm />
-                <UpdatePasswordForm />
-                <Stack alignItems="flex-end">
-                    <Button variant="delete">
-                        Delete Account
-                    </Button>
-                </Stack>
-            </Stack>
-        </DashboardLayout>
-    );
+  return (
+    <DashboardLayout>
+      <Stack>
+        <ProfileIcon />
+      </Stack>
+      <Stack spacing={2}>
+        <UpdateEmailForm />
+        <UpdatePasswordForm />
+        <Stack alignItems="flex-end">
+          <Button variant="delete">Delete Account</Button>
+        </Stack>
+      </Stack>
+    </DashboardLayout>
+  );
 };
 
 export default Profile;

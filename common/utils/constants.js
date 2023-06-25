@@ -7,6 +7,7 @@ export const Colors = {
   white: "#FFFFFF",
   green: "#27AE60",
   red: "#EB5757",
+  purple: "#A020F0",
   fadedBlue: "#619FCD",
   greyLight: "#F0F1F5",
   greyMed: "#D8DAE3",
@@ -19,8 +20,6 @@ export const Colors = {
 };
 
 export const DrawerWidth = 230;
-export const PageGutter = "2%";
-export const BlockSpacing = 3;
 
 export const ValidationMessages = {
   required: "Required",
@@ -28,20 +27,4 @@ export const ValidationMessages = {
   passwordTooShort: "Password is too short (minimum 6 characters)",
   passwordNotMatch: "Passwords not match",
   emailDoNotMatch: "Emails not match",
-};
-
-export const NotificationMessages = {
-  auth: {
-    authFailed: "Invalid email or password provided.",
-    invalidKey: "Invalid key provided!",
-    usedKey: "This key has already been used!",
-    activationSuccess: "Your account has been successfully activated.",
-    userExists: "A user with this email already exists!",
-    userDoesNotExists: "A user with this email does not exist!",
-    activationEmailSent: "An activation link has been sent to your email.",
-    resetPasswordEmailSent:
-      "A reset password link has been sent to your email.",
-    passwordResetSuccess:
-      "Your password has been reset. You will be redirected to the sign in page shortly...",
-  },
 };

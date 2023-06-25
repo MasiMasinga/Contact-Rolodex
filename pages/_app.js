@@ -6,6 +6,9 @@ import { SnackbarProvider } from "notistack";
 
 // Provider
 import { StateProvider } from "@/common/context/StateContext";
+import { AuthProvider } from "@/common/context/AuthContext";
+import { DashboardProvider } from "./dashboard/context/DashboardContext";
+import { ProfileProvider } from "./profile/context/ProfileContext";
 
 // Global Styles
 import { Global, css } from "@emotion/react";
@@ -41,9 +44,15 @@ export default function App({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
       <SnackbarProvider>
         <StateProvider>
-          <Global styles={GlobalStyle} />
-          <CssBaseline />
-          <Component {...pageProps} />
+          <AuthProvider>
+            <ProfileProvider>
+              <DashboardProvider>
+                <Global styles={GlobalStyle} />
+                <CssBaseline />
+                <Component {...pageProps} />
+              </DashboardProvider>
+            </ProfileProvider>
+          </AuthProvider>
         </StateProvider>
       </SnackbarProvider>
     </ThemeProvider>

@@ -11,6 +11,7 @@ const InputField = React.forwardRef(
       disabled = false,
       fullWidth = true,
       size = "small",
+      defaultValue,
       error,
       value,
       onChange,
@@ -27,6 +28,7 @@ const InputField = React.forwardRef(
         helperText={error && !disabled ? error.message : hintText}
         disabled={disabled}
         size={size}
+        defaultValue={defaultValue}
         variant="outlined"
         fullWidth={fullWidth}
         inputRef={ref}

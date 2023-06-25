@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useContext}from "react";
 
 // Mui
 import Stack from "@mui/material/Stack";
+
+// Context
+import {DashboardContext} from "@/pages/dashboard/context/DashboardContext"
 
 // Components
 import Typography from "@/common/components/Typography";
@@ -10,6 +13,8 @@ import Typography from "@/common/components/Typography";
 import { Colors } from "@/common/utils/constants";
 
 const ContactStats = () => {
+  const {contactStats} = useContext(DashboardContext);
+
   return (
     <Stack
       direction="row"
@@ -26,19 +31,25 @@ const ContactStats = () => {
         <Typography variant="h6" sx={{ fontWeight: 400 }}>
           Contacts Added
         </Typography>
-        <Typography variant="h5" align="center">23</Typography>
+        <Typography variant="h5" align="center">
+          0
+        </Typography>
       </Stack>
-      <Stack justifyContent="center"  spacing={1}>
+      <Stack justifyContent="center" spacing={1}>
         <Typography variant="h6" sx={{ fontWeight: 400 }}>
           Total number of contacts
         </Typography>
-        <Typography variant="h5" align="center">46</Typography>
+        <Typography variant="h5" align="center">
+          0
+        </Typography>
       </Stack>
-      <Stack justifyContent="center"  spacing={1}>
+      <Stack justifyContent="center" spacing={1}>
         <Typography variant="h6" sx={{ fontWeight: 400 }}>
           Total number of contacts deleted
         </Typography>
-        <Typography variant="h5" align="center">4</Typography>
+        <Typography variant="h5" align="center">
+          0
+        </Typography>
       </Stack>
     </Stack>
   );

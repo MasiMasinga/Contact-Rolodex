@@ -9,6 +9,7 @@ const Select = React.forwardRef(
       id,
       name,
       label,
+      defaultValue,
       value,
       onChange,
       onBlur,
@@ -30,6 +31,7 @@ const Select = React.forwardRef(
         name={name}
         select
         label={label}
+        defaultValue={defaultValue}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
