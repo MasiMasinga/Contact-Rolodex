@@ -11,7 +11,7 @@ import { DashboardContext } from "@/pages/dashboard/context/DashboardContext"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 // React Hook Form
-import { useForm, Controller } from "react-hook-form";
+import { useForm, useFieldArray, Controller } from "react-hook-form";
 
 // Components
 import ContentBlock from "@/common/components/ContentBlock";
@@ -26,17 +26,18 @@ import { ValidationMessages } from "../../../common/utils/constants";
 import { isValidEmail } from "@/common/utils/validations";
 
 const CreateContact = () => {
-  const { loading, handleCreateContact } = useContext(DashboardContext);
+  const { contacts, handleCreateContact } = useContext(DashboardContext);
   const [openModal, setOpenModal] = useState(false);
 
   const { control, handleSubmit } = useForm({
-    defaultValues: {
-      avatar: "",
-      name: "",
-      email_address: "",
-      contact_type: "",
-      phone_number: "",
-    },
+    contacts,
+    // defaultValues: {
+    //   avatar: "",
+    //   name: "",
+    //   email_address: "",
+    //   contact_type: "",
+    //   phone_number: "",
+    // },
   });
 
   const onSubmit = handleSubmit((data) => {

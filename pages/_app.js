@@ -9,6 +9,7 @@ import { StateProvider } from "@/common/context/StateContext";
 import { AuthProvider } from "@/common/context/AuthContext";
 import { DashboardProvider } from "./dashboard/context/DashboardContext";
 import { ProfileProvider } from "./profile/context/ProfileContext";
+import { SessionProvider } from "next-auth/react"
 
 // Global Styles
 import { Global, css } from "@emotion/react";
@@ -39,22 +40,24 @@ const GlobalStyle = css`
   }
 `;
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, session }) {
   return (
     <ThemeProvider theme={theme}>
-      <SnackbarProvider>
-        <StateProvider>
-          <AuthProvider>
-            <ProfileProvider>
-              <DashboardProvider>
-                <Global styles={GlobalStyle} />
-                <CssBaseline />
-                <Component {...pageProps} />
-              </DashboardProvider>
-            </ProfileProvider>
-          </AuthProvider>
-        </StateProvider>
-      </SnackbarProvider>
+      <SessionProvider session={session}>
+        <SnackbarProvider>
+          <StateProvider>
+            <AuthProvider>
+              <ProfileProvider>
+                <DashboardProvider>
+                  <Global styles={GlobalStyle} />
+                  <CssBaseline />
+                  <Component {...pageProps} />
+                </DashboardProvider>
+              </ProfileProvider>
+            </AuthProvider>
+          </StateProvider>
+        </SnackbarProvider>
+      </SessionProvider>
     </ThemeProvider>
   );
 }

@@ -10,13 +10,21 @@ export const DashboardContext = createContext();
 
 export const DashboardProvider = ({ children }) => {
     const { setNotificationMessage } = useContext(StateContext);
-    const [contacts, setContacts] = useState([]);
+    const [contacts, setContacts] = useState(
+        {
+            avatar: "",
+            name: "",
+            email_address: "",
+            contact_type: "",
+            phone_number: "",
+          }
+    );
     const [contactStats, setContactStats] = useState([]);
     const [loading, setLoading] = useState(false);
 
     const handleCreateContact = async (data) => {
         //setLoading(true)
-
+        //let postData = {};
         setContacts(data)
         // const response = await api.post(`api/contacts`, postData);
 
@@ -92,7 +100,6 @@ export const DashboardProvider = ({ children }) => {
 
     const handleGetDeletedContacts = async () => { };
 
-
     let value = {
         contacts,
         contactStats,
@@ -107,6 +114,10 @@ export const DashboardProvider = ({ children }) => {
         handleGetDeletedContacts
     };
 
-    return <DashboardContext.Provider value={value}>{children}</DashboardContext.Provider>;
+    return (
+        <DashboardContext.Provider value={value}>
+            {children}
+        </DashboardContext.Provider>
+    );
 };
 

@@ -56,17 +56,10 @@ const userData = [
     phone_number: "072 343 1242",
     email_address: "masingamasibonge@gmail.com",
   },
-  {
-    id: 5,
-    name: "Rethabile Masinga",
-    contact_type: "Family",
-    phone_number: "072 343 1242",
-    email_address: "masingamasibonge@gmail.com",
-  },
 ];
 
 const ContactTable = () => {
-  const { loading, contacts } = useContext(DashboardContext);
+  const { contacts } = useContext(DashboardContext);
   const [tableDataLoading, setTableDataLoading] = useState(false);
   const [openDeleteModal, setDeleteModal] = useState(false);
   const [openEditModal, setEditModal] = useState(false);
@@ -86,6 +79,7 @@ const ContactTable = () => {
       field: "name",
       headerName: "Name",
       width: 150,
+      sortable: false,
       renderCell: ({ row: { name } }) => {
         return <Typography variant="subtitle">{name}</Typography>;
       },
@@ -94,6 +88,7 @@ const ContactTable = () => {
       field: "image",
       headerName: "Image",
       width: 150,
+      sortable: false,
       renderCell: ({ row: { image } }) => {
         return <></>;
       },
@@ -102,6 +97,7 @@ const ContactTable = () => {
       field: "contact_type",
       headerName: "Contact Type",
       minWidth: 150,
+      sortable: false,
       renderCell: ({ row: { contact_type } }) => {
         return (
           <Stack alignItems="center" direction="row" spacing={1}>
@@ -121,11 +117,10 @@ const ContactTable = () => {
       field: "phone_number",
       headerName: "Phone Number",
       width: 150,
+      sortable: false,
       renderCell: ({ row: { phone_number } }) => {
         return (
-          <Stack direction="row" alignItems="baseline">
-            <Typography variant="subtitle">{phone_number}</Typography>
-          </Stack>
+          <Typography variant="subtitle">{phone_number}</Typography>
         );
       },
     },
@@ -133,16 +128,16 @@ const ContactTable = () => {
       field: "email_address",
       headerName: "Email",
       width: 300,
+      sortable: false,
       renderCell: ({ row: { email_address } }) => {
         return (
-          <Stack direction="row" alignItems="baseline">
-            <Typography variant="subtitle">{email_address}</Typography>
-          </Stack>
+          <Typography variant="subtitle">{email_address}</Typography>
         );
       },
     },
     {
       width: 350,
+      sortable: false,
       renderCell: () => {
         return (
           <Stack direction="row" spacing={2}>
@@ -194,11 +189,11 @@ const ContactTable = () => {
         <DataGrid
           height="calc(100vh - 420px)"
           columns={TableHeaders}
-          data={contacts}
+          data={[]}
           loading={tableDataLoading}
           noRowsTitle="No Contacts Data Available!"
           noRowsDescription="Please add accounts."
-          getRowId={(row) => row.pk}
+          getRowId={(row) => row.id}
         />
         <ViewModal
           open={openViewModal}

@@ -17,7 +17,6 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 // Components
 import DialogForm from "@/common/components/DialogForm";
 import Button from "@/common/components/Button";
-import Typography from "@/common/components/Typography";
 import InputField from "@/common/components/InputField";
 import Select from "@/common/components/Select";
 
@@ -26,7 +25,7 @@ import { ValidationMessages } from "../../../common/utils/constants";
 import { isValidEmail } from "../../../common/utils/validations";
 
 const EditModal = ({ open, loading, handleClose }) => {
-    const { loading, handleUpdateContact } = useContext(DashboardContext);
+    const { handleUpdateContact } = useContext(DashboardContext);
     const { control, handleSubmit } = useForm({
         defaultValues: {
             avatar: "",
